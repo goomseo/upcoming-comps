@@ -1,8 +1,8 @@
 <template>
   <div class="border-t pt-4 mt-4">
-    <p><strong>Name:</strong> {{ user.user.name }}</p>
-    <p><strong>Region:</strong> {{ user.user.country.name }}</p>
-    <p><strong>WCA ID:</strong>
+    <p><strong>Name: </strong>{{ user.user.name }}</p>
+    <p><strong>Region: </strong>{{ user.user.country.name }}</p>
+    <p><strong>WCA ID: </strong>
       <a :href="user.user.url" target="_blank" class="text-blue-700 hover:underline">{{ user.user.wca_id }}</a>
     </p>
 
