@@ -1,10 +1,12 @@
 <template>
-  <main class="min-h-screen bg-gray-100 p-6">
-    <div class="max-w-6xl mx-auto bg-white p-6 rounded shadow">
-      <h1 class="text-2xl font-bold mb-4 text-left">Upcoming Comps</h1>
-      <p class="text-l font-medium text-left">Track upcoming competitions of the competitors you’re looking for!</p>
-      <p class="text-l font-normal mb-4 text-left">Note: Competitions that use an external registration website cannot be tracked unless the competitor list is uploaded to the WCA website.</p>
-      <div class="flex gap-2 mb-4">
+  <main class="min-h-screen bg-gray-100 p-4 sm:p-6">
+    <div class="max-w-6xl mx-auto bg-white p-4 sm:p-6 rounded shadow">
+      <h1 class="text-xl sm:text-2xl font-bold mb-2 sm:mb-4 text-left">Upcoming Comps</h1>
+      <p class="text-base sm:text-lg font-medium text-left">Track upcoming competitions of the competitors you’re looking for!</p>
+      <p class="text-sm sm:text-base font-normal mb-4 text-left">
+        Note: Competitions that use an external registration website cannot be tracked unless the competitor list is uploaded to the WCA website.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-2 mb-4">
         <input
           v-model="wcaId"
           @input="wcaId = wcaId.toUpperCase()"
@@ -12,11 +14,11 @@
           type="text"
           maxlength="10"
           placeholder="Enter WCA ID (e.g. 2014GUMI01)"
-          class="flex-1 border border-gray-300 rounded px-3 py-2"
+          class="flex-1 w-full min-w-0 border border-gray-300 rounded px-3 py-2"
         />
         <button
           @click="fetchUserData"
-          class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+          class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 w-full sm:w-auto"
         >
           Search
         </button>
@@ -26,7 +28,7 @@
 
       <UserInfo v-if="user" :user="user" />
     </div>
-    <footer class="mt-12 border-t pt-4 text-sm text-gray-500 text-center">
+    <footer class="mt-12 border-t pt-4 text-xs sm:text-sm text-gray-500 text-center">
       <p>
         Built by <a href="https://github.com/goomseo" target="_blank" class="text-orange-600 hover:underline">Minseo Gu</a> (<a href="https://www.worldcubeassociation.org/persons/2014GUMI01" target="_blank" class="text-orange-600 hover:underline">2014GUMI01</a>).
       </p>
