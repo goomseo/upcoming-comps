@@ -663,7 +663,7 @@
         },
         {
           "info": "",
-          "name": "Hong Kong, China",
+          "name": "Hong Kong",
           "continent_id": "_Asia",
           "class": "state",
           "iso2": "HK",
@@ -1439,7 +1439,7 @@
         },
         {
           "info": "",
-          "name": "Chinese Taipei",
+          "name": "Taiwan",
           "continent_id": "_Asia",
           "class": "state",
           "iso2": "TW",
