@@ -65,9 +65,10 @@ for (const country of countries.states_lists[0].states) {
 }
 
 const sortedCompetitions = computed(() => {
-  return [...(props.user.upcoming_competitions || [])].sort(
-    (a, b) => new Date(a.start_date) - new Date(b.start_date)
-  );
+  const upcoming_competitions = props.user.upcoming_competitions || [];
+  return upcoming_competitions
+    .filter((c) => c.announced_at !== null)
+    .sort((a, b) => new Date(a.start_date) - new Date(b.start_date));
 });
 
 function getCountryName(iso2) {
